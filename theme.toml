@@ -1,0 +1,7 @@
+name     = "Stoat"
+slug     = "stoat"
+tagline  = "A free, fast WordPress landing-page theme"
+accent   = "#1d4ed8"
+demo     = "https://stoat.withemes.com/"
+download = "https://wordpress.org/themes/stoat/"
+support  = "https://wordpress.org/support/theme/stoat/"

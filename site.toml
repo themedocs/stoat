@@ -1,0 +1,5 @@
+title       = "Stoat docs"
+# Origin only — page URLs already carry the path prefix.
+base_url    = "https://themedocs.github.io"
+path_prefix = "/stoat/"
+home_url    = "https://themedocs.github.io/"
