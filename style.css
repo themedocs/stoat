@@ -78,7 +78,6 @@ kbd{border:1px solid #ccc;border-bottom-width:2px;border-radius:3px;padding:.05e
 .pick b{display:block;color:#000;font-size:1.1em}
 .pick span{color:#666;font-size:.92em}
 
-.foot{border-top:1px solid #eee;padding:1.4em;text-align:center;font-size:.85em;color:#999}
 
 /* mobile ----------------------------------------------------------------- */
 @media(max-width:64em){

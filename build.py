@@ -303,7 +303,6 @@ def shell(site, theme, *, title, description, url, body, nav, toc, crumbs, trail
         + nav
         + toc
         + "</div>"
-        + f'<footer class=foot><a href="{site["home_url"]}">All theme docs</a></footer>'
         + "</body></html>"
     )
 
