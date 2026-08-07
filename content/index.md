@@ -5,7 +5,7 @@ description: "Stoat wp theme is a free WordPress theme."
 
 Stoat wp theme is a free WordPress theme.
 
-- **Demo:** [live demo site](https://stoat.withemes.com)
+- **Demo:** [live demo site](https://stoat.themepreview.site)
 - **License:** GPL-2.0-or-later
 - **Requires:** WordPress 6.5+, PHP 7.4+
 - **Key features:** Tiny js, self-hosted fonts, everything at minimum
@@ -69,7 +69,7 @@ If you want to disable featured image, go to **Customize → Blog/archive**
 
 Edit a Page → **Page options** box → check **Hide page title?** to drop the title on the front end.
 
-Example - a full-bleed cover page: [page-with-cover](https://stoat.withemes.com/page-with-cover/) is just a Page with the title hidden, using the Gutenberg **Cover** block as content.
+Example - a full-bleed cover page: [page-with-cover](https://stoat.themepreview.site/page-with-cover/) is just a Page with the title hidden, using the Gutenberg **Cover** block as content.
 
 ### Search
 
@@ -78,7 +78,7 @@ There is no search icon in the header - search is a plain Page.
 1. Create a Page (e.g. "Search").
 2. Add the **Search** block, publish.
 
-Example: [Demo search page](https://stoat.withemes.com/search/).
+Example: [Demo search page](https://stoat.themepreview.site/search/).
 
 Note: **Customize → Misc → Disable pages in search results** is on by default, so search returns posts only.
 
