@@ -3,3 +3,6 @@ title       = "Stoat docs"
 base_url    = "https://themedocs.github.io"
 path_prefix = "/stoat/"
 home_url    = "https://themedocs.github.io/"
+
+# Google Analytics 4 — one property covers every path under themedocs.github.io.
+ga_id       = "G-YC7YN7JPV8"

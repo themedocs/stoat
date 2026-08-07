@@ -5,8 +5,9 @@ Theme docs — static site builder.
     python3 build.py             content/ -> docs/
     python3 build.py --scaffold  create any .md listed in nav.toml but missing on disk
 
-One repo holds one theme. Output is plain HTML: no runtime, no JS, no webfonts,
-stylesheet inlined, so a page is a single request. Only dependency is `markdown`.
+One repo holds one theme. Output is plain HTML: no webfonts, stylesheet inlined,
+and the only script is the analytics tag, so a page is a single blocking request.
+Only dependency is `markdown`.
 
 GitHub Pages serves the docs/ folder on the default branch, which is why the
 build output is committed rather than built by CI.
@@ -242,6 +243,18 @@ def breadcrumb_ld(base_url, trail):
     )
 
 
+def analytics(ga_id):
+    """Google Analytics tag. Empty string when site.toml carries no ga_id."""
+    if not ga_id:
+        return ""
+    return (
+        f'<script async src="https://www.googletagmanager.com/gtag/js?id={ga_id}"></script>'
+        "<script>window.dataLayer=window.dataLayer||[];"
+        "function gtag(){dataLayer.push(arguments);}"
+        f"gtag('js',new Date());gtag('config','{ga_id}');</script>"
+    )
+
+
 def shell(site, theme, *, title, description, url, body, nav, toc, crumbs, trail, css):
     base, prefix = site["base_url"], site["path_prefix"]
     accent = theme.get("accent", "#b45309")
@@ -264,6 +277,7 @@ def shell(site, theme, *, title, description, url, body, nav, toc, crumbs, trail
         head.append(f'<meta property="og:description" content="{html.escape(description)}">')
     head.append(f"<style>:root{{--a:{accent}}}{css}</style>")
     head.append(f'<script type="application/ld+json">{breadcrumb_ld(base, trail)}</script>')
+    head.append(analytics(site.get("ga_id")))
 
     links = "".join(
         f'<a href="{theme[key]}"{" rel=noopener target=_blank" if key != "support" else ""}>{label}</a>'
