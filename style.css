@@ -12,7 +12,6 @@ a:hover{text-decoration:underline}
 .bar{display:flex;align-items:center;gap:.8em;padding:.7em 1.2em;border-bottom:1px solid #e3e3e3;position:sticky;top:0;background:#fff;z-index:5}
 .bar .brand{color:#000;font-weight:600}
 .bar .brand span{color:#999;font-weight:400}
-.bar .ver{font-size:.75em;color:#666;border:1px solid #ddd;padding:.05em .4em;border-radius:2px}
 .bar-links{margin-left:auto;display:flex;gap:1.1em;font-size:.9em}
 .jump{display:none}
 
@@ -90,7 +89,7 @@ kbd{border:1px solid #ccc;border-bottom-width:2px;border-radius:3px;padding:.05e
   .jump{display:block;font-size:.9em;color:#666}
   .bar{padding:.7em .9em}
   .bar-links{display:none}
-  .bar .ver{margin-left:auto}
+  .jump{margin-left:auto}
   h1{font-size:1.6em}
   h2{font-size:1.2em}
   .pager{flex-direction:column}

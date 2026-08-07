@@ -287,7 +287,6 @@ def shell(site, theme, *, title, description, url, body, nav, toc, crumbs, trail
     bar = (
         f'<header class=bar><a class=brand href="{prefix}">'
         f'{html.escape(theme["name"])} <span>docs</span></a>'
-        f'<span class=ver>{html.escape(str(theme.get("version", "")))}</span>'
         f"<nav class=bar-links>{links}</nav>"
         f'<a class=jump href="#nav">All pages</a></header>'
     )
