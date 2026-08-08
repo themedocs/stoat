@@ -3,9 +3,17 @@ title: "Changelog"
 description: "Every released version of the Stoat theme, newest first."
 ---
 
-Every released version of Stoat, newest first. Current version: **1.3**, which
+Every released version of Stoat, newest first. Current version: **1.3.1**, which
 needs WordPress 6.5 and PHP 7.4. Update from **Dashboard → Appearance → Themes**
 like any other WordPress.org theme.
+
+## 1.3.1
+
+*Released August 8, 2026*
+
+- The theme is now published by Owldraft. Theme author, author URI, and theme URI have been updated.
+- Documentation has moved to [themedocs.github.io/stoat](https://themedocs.github.io/stoat/) and the demo to [stoat.themepreview.site](https://stoat.themepreview.site).
+- The footer theme credit links to the new theme URL.
 
 ## 1.3
 
