@@ -1,1 +1,6 @@
 # Left-nav order. Titles come from each page's front matter.
+
+[[section]]
+title = "Changelog"
+dir   = ""
+pages = ["changelog"]
