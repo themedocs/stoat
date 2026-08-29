@@ -13,7 +13,7 @@ theme.
 *Released August 8, 2026*
 
 - The theme is now published by Owldraft. Theme author, author URI, and theme URI have been updated.
-- Documentation has moved to https://themedocs.github.io/stoat and the demo to https://stoat.themepreview.site.
+- Documentation has moved to https://themedocs.github.io/stoat and the demo to https://stoat.owldraft.com.
 - The footer theme credit links to the new theme URL.
 
 ## 1.3
