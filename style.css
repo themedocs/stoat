@@ -1,23 +1,26 @@
-/* OwlDraft docs. Inlined into every page at build time — keep it small.
+/* Fern docs. Inlined into every page at build time — keep it small.
    System fonts only, no JS, no webfonts.
 
-   Same sheet as the Fern docs, so every theme's docs read as one site: Tahoma
-   over Verdana, black on white, one accent (--a, from theme.toml) carrying
-   every link, hairline rules at 15% black, and square corners throughout.
+   The look is quietsite.org's, so the docs read as part of the same site as the
+   theme's home page: Tahoma over Verdana, black on white, one accent
+   (--a, from theme.toml) carrying every link, hairline rules at 15% black, and
+   square corners throughout — Fern has a border-radius of 0 on every box it
+   draws, and so does this.
 
-   Links get two treatments rather than one:
-   - in the writing (main), the accent with a line under it, dropped on hover;
+   Links follow Fern's two treatments rather than one:
+   - in the writing (main), the accent with a line under it, dropped on hover —
+     Fern's "link style: accent, underlined";
    - in the chrome (bar, sidebar, toc, breadcrumbs, pager), the accent with no
-     line, gaining a 2px one on hover or when current.
+     line, gaining a 2px one on hover or when current — Fern's nav treatment.
    That is the whole reason a docs page can carry this many links and still read
    quietly: a link in a sentence and a link in a menu are not the same thing. */
 
 :root{
-  --ink:#000;                    /* body text */
-  --muted:#6b6b6b;               /* labels, dates, the lines that name things */
-  --line:rgba(0,0,0,.15);        /* one hairline, tinted by whatever it is drawn over */
+  --ink:#000;                    /* body text: Fern leaves it to the browser, which is black */
+  --muted:#6b6b6b;               /* Fern's --secondary-text: labels, dates, the lines that name things */
+  --line:rgba(0,0,0,.15);        /* Fern's --border-color: one hairline, tinted by whatever it is drawn over */
   --line-soft:rgba(0,0,0,.08);   /* the same rule where it runs the height of a column and would otherwise shout */
-  --tint:rgba(0,0,0,.06);        /* code and pre: 6% of black */
+  --tint:rgba(0,0,0,.06);        /* code and pre: Fern mixes 7% of currentColor; on black text that is this */
   --body-font:Tahoma,Verdana,sans-serif;
   --code-font:ui-monospace,SFMono-Regular,Menlo,Consolas,"Liberation Mono",monospace;
 }
@@ -31,11 +34,14 @@ a:hover{text-decoration:underline}
 .skip:focus{left:.5em;top:.5em;z-index:9;background:#fff;padding:.4em .8em;border:1px solid var(--line)}
 
 /* top bar ---------------------------------------------------------------- */
-/* The masthead reads as one line of type: the name at body size in the body
-   font, the word "docs" a step back in the secondary color. */
+/* The masthead reads as one line of type, the way Fern's does: the name at body
+   size in the body font, the word "docs" a step back in the secondary color. */
 .bar{display:flex;align-items:center;gap:.8em;padding:.9em 1.2em;border-bottom:1px solid var(--line);position:sticky;top:0;background:#fff;z-index:5}
 .bar .brand{display:inline-flex;align-items:center;gap:.5em;color:var(--ink);font-weight:700}
-.bar .brand span{color:var(--muted);font-weight:400}
+/* quietsite.org's logo, sized to the line of type beside it. Round on purpose:
+   it is the one round thing on the page, as it is on quietsite.org itself. */
+.bar .brand img{width:24px;height:24px;object-fit:cover;border-radius:50%;display:block}
+.bar .brand .name span{color:var(--muted);font-weight:400}
 .bar-links{margin-left:auto;display:flex;gap:1.1em;font-size:.9em}
 .bar-links a,.bar .brand{text-decoration:none}
 .bar-links a:hover{text-decoration:underline;text-decoration-thickness:2px}

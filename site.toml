@@ -1,8 +1,8 @@
 title       = "Stoat docs"
 # Origin only — page URLs already carry the path prefix.
-base_url    = "https://themedocs.github.io"
+base_url    = "https://docs.owldraft.com"
 path_prefix = "/stoat/"
-home_url    = "https://themedocs.github.io/"
+home_url    = "https://docs.owldraft.com/"
 
-# Google Analytics 4 — one property covers every path under themedocs.github.io.
-ga_id       = "G-YC7YN7JPV8"
+# Google Analytics 4 — one property covers every path under docs.owldraft.com.
+ga_id       = "G-VGC71S6DLL"

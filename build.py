@@ -267,6 +267,12 @@ def shell(site, theme, *, title, description, url, body, nav, toc, crumbs, trail
         head.append(f'<meta name=description content="{html.escape(description)}">')
     head += [
         f'<link rel=canonical href="{base}{url}">',
+        # The site lives under a path prefix, so /favicon.ico at the origin is a
+        # different theme's docs — every icon has to be named outright.
+        f'<link rel=icon href="{prefix}assets/favicon.ico" sizes=any>',
+        f'<link rel=icon type="image/png" sizes="32x32" href="{prefix}assets/favicon-32.png">',
+        f'<link rel=icon type="image/png" sizes="16x16" href="{prefix}assets/favicon-16.png">',
+        f'<link rel=apple-touch-icon href="{prefix}assets/apple-touch-icon.png">',
         f'<meta property="og:title" content="{html.escape(title)}">',
         f'<meta property="og:url" content="{base}{url}">',
         '<meta property="og:type" content="article">',
@@ -281,12 +287,16 @@ def shell(site, theme, *, title, description, url, body, nav, toc, crumbs, trail
 
     links = "".join(
         f'<a href="{theme[key]}"{" rel=noopener target=_blank" if key != "support" else ""}>{label}</a>'
-        for key, label in (("demo", "Demo"), ("download", "Download"), ("support", "Support"))
+        for key, label in (("demo", "Demo"), ("feature", "Feature page"),
+                           ("download", "Download"), ("support", "Support"))
         if theme.get(key)
     )
     bar = (
         f'<header class=bar><a class=brand href="{prefix}">'
-        f'{html.escape(theme["name"])} <span>docs</span></a>'
+        # docs.owldraft.com's mark, the same one owldraft.com wears. The wordmark
+        # beside it already names the site, so the image is decorative.
+        f'<img src="{prefix}assets/owldraft-mark.jpg" alt="" width=24 height=24>'
+        f'<span class=name>{html.escape(theme["name"])} <span>docs</span></span></a>'
         f"<nav class=bar-links>{links}</nav>"
         f'<a class=jump href="#nav">All pages</a></header>'
     )
