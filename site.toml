@@ -3,6 +3,7 @@ title       = "Stoat docs"
 base_url    = "https://docs.owldraft.com"
 path_prefix = "/stoat/"
 home_url    = "https://docs.owldraft.com/"
+mark        = "owldraft-mark.jpg"
 
 # Google Analytics 4 — one property covers every path under docs.owldraft.com.
 ga_id       = "G-VGC71S6DLL"

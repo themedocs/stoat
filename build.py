@@ -293,9 +293,10 @@ def shell(site, theme, *, title, description, url, body, nav, toc, crumbs, trail
     )
     bar = (
         f'<header class=bar><a class=brand href="{prefix}">'
-        # docs.owldraft.com's mark, the same one owldraft.com wears. The wordmark
-        # beside it already names the site, so the image is decorative.
-        f'<img src="{prefix}assets/owldraft-mark.jpg" alt="" width=24 height=24>'
+        # The docs host's mark. The wordmark beside it already names the site,
+        # so the image is decorative.
+        f'<img src="{prefix}assets/{site.get("mark", "owldraft-mark.jpg")}" '
+        f'alt="" width=24 height=24>'
         f'<span class=name>{html.escape(theme["name"])} <span>docs</span></span></a>'
         f"<nav class=bar-links>{links}</nav>"
         f'<a class=jump href="#nav">All pages</a></header>'
