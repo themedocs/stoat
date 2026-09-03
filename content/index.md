@@ -5,7 +5,7 @@ description: "Stoat wp theme is a free WordPress theme."
 
 Stoat wp theme is a free WordPress theme.
 
-- **Demo:** [live demo site](https://stoat.owldraft.com)
+- **Demo:** [live demo site](https://stoat.owldraft.com/)
 - **License:** GPL-2.0-or-later
 - **Requires:** WordPress 6.5+, PHP 7.4+
 - **Key features:** Tiny js, self-hosted fonts, everything at minimum
